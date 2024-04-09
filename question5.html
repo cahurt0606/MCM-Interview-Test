@@ -1,0 +1,51 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Remove Link and Text from BBB Profile Icon</title>
+      <style>
+        .white-square {
+            position: absolute;
+            top: 76px;
+            left: 76px;
+            width: 50px; /* Adjust size as needed */
+            height: 30px; /* Adjust size as needed */
+            background-color: white;
+            z-index: 1; /* Ensure it's above the image */
+        }
+        .frvtbum-container {
+            position: relative; /* Ensure position is relative */
+        }
+    </style>
+    
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+            // Create a div for the white square
+            var whiteSquare = document.createElement('div');
+            whiteSquare.classList.add('white-square');
+            
+            // Get the parent container of the image
+            var parentContainer = document.querySelector('.frvtbum').closest('.frvtbum-container');
+            
+            // Append the white square to the parent container
+            parentContainer.appendChild(whiteSquare);
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            // Get the BBB profile icon link
+            var bbbLink = document.querySelector('a.frvtbum');
+            
+            // Remove the link
+            if (bbbLink) {
+                bbbLink.removeAttribute('href');
+                bbbLink.removeAttribute('title');
+                
+                // Remove the text "Click for Profile"
+                
+            }
+        });
+    </script>
+    </head>
+    
+    
+    <div class="background-color: white;" style="background-color: white;display: table;align-items: center;margin: 0 auto;margin-top: 10px;border-radius: 10px;">
+       <div class="frvtbum-container">
+    <a class="frvtbum" href="https://www.bbb.org/us/wa/seattle/profile/ecommerce/amazoncom-1296-7039385#bbbseal" title="Amazon.com"><img style="padding: 0px; border: none;" src="https://secure.deviatelabs.com/wp-content/uploads/2024/03/seal-for-27307456.png" width="158" height="110" alt="Amazon.com"></a></div></div>
